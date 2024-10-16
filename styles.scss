@@ -1,0 +1,33 @@
+
+// styles examples for @mixins
+@mixin button-style($color, $background) {
+    background-color: $background;
+    color: $color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .button-primary {
+    @include button-style(#fff, #4CAF50);
+  }
+  
+  .button-secondary {
+    @include button-style(#333, #ddd);
+  }
+
+//   styles examples @extends
+.button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .primary-button {
+    @extend .button;
+    font-weight: bold;
+  }
+  
+  
